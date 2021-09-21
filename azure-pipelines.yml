@@ -6,16 +6,15 @@
 trigger:
   branches:
     include:
-    - dev
-    exclude:
     - EP
+    exclude:
+    - dev
 pr:
   branches:
     include:
-    - dev
-    exclude:
     - EP
-
+    exclude:
+    - dev
 
 pool:
   vmImage: ubuntu-latest
