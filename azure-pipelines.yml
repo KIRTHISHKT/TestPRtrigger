@@ -16,7 +16,7 @@ trigger:
 resources:
   webhooks:
     - webhook: MyWebhook        ### Webhook alias
-      connection: testwebhookSC    ### Incoming webhook service connection
+      connection: KirtwebhookSC    ### Incoming webhook service connection
 
 variables:
   YARN_CACHE_FOLDER: $(Pipeline.Workspace)/.yarn 
