@@ -19,7 +19,7 @@ resources:
       connection: testwebhookSC    ### Incoming webhook service connection
 
 variables:
-  YARN_CACHE_FOLDER: $(Pipeline.Workspace)/.yarn
+  YARN_CACHE_FOLDER: $(Pipeline.Workspace)/.yarn 
   NUXT_CACHE_FOLDER: ./node_modules/.cache/nuxt/
 
 steps:
