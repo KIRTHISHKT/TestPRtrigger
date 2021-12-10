@@ -16,7 +16,12 @@ trigger:
 resources:
   webhooks:
     - webhook: MyWebhook        ### Webhook alias
-      connection: KirtwebhookSC    ### Incoming webhook service connection
+      connection: KirtwebhookSCNew    ### Incoming webhook service connection
+      filters:            ### List of JSON parameters to filter; Parameters are AND'ed
+        - path: action    ### JSON path in the payload
+          value: build    ### Expected value in the path provided
+        - path: env    ### JSON path in the payload
+          value: prod    ### Expected value in the path provided  
 
 variables:
   YARN_CACHE_FOLDER: $(Pipeline.Workspace)/.yarn 
